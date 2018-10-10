@@ -7,5 +7,6 @@ public class Main {
         if (args.length > 0) {
             System.out.println("ARG: " + args[0]);
         }
+        System.out.println("Test");
     }
 }
