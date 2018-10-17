@@ -27,14 +27,41 @@ public class DataTypes {
 
         System.out.println("b= " + b);
         System.out.println("bb= " + bb);
-        /* tak naprawde, ++ dodalo sie w b i bb, ale dopiero pozniej i zostalo wykonane w bb */
+        /* tak naprawde, ++ d
+        odalo sie w b i bb, ale dopiero pozniej i zostalo wykonane w bb */
 
         double d1 = 2;
         double d2 = 3;
 
         double d3 = Math.pow(d1, d2);
 
-        System.out.println(d3);
-    }
+        System.out.println("d3= " + d3);
 
+        int ii1, ii2;
+        ii1 = 5;
+        ii2 = 5;
+       /* if (ii1==ii2 ){
+            System.out.println("ii2=ii1");            }
+            else {
+            System.out.println("not equal"); */
+
+        boolean cond = ii1 == ii2;
+        //! - negate
+        //|| - or
+        //&& - and
+
+        if (cond || (ii2 > 3 && ii1 > 5)) {
+            System.out.println("ii2=ii1");
+        } else {
+            System.out.println("not equal");
+
+            int iii = (ii1 > 5 ? 15 : 10);
+            // znaczy to samo co:
+            if (ii1 > 5)
+                iii = 15;
+            else iii = 10;
+
+        }
+
+    }
 }
