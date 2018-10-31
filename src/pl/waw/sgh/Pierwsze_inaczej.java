@@ -4,12 +4,11 @@ public class Pierwsze_inaczej {
 
 
     public static void main(String[] args) {
-
         int m = 20;
         int b = 0;
         int x = 0;
         if (m >= 2) {
-            System.out.println(2);
+            System.out.println("1 liczba pierwsza to " + 2);
         }
         for (int i = 2; i > 0; i++) {
             b = 0;
@@ -20,7 +19,7 @@ public class Pierwsze_inaczej {
                 if (j == 2) {
                     x++;
                     if (x > m) break;
-                    System.out.println(i);
+                    System.out.println(x + 1 + " liczba pierwsza to " + i);
                 }
             }
         }
