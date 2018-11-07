@@ -9,9 +9,11 @@ public class FileReader {
         File inFile = new File("h://mytxtfile.txt");
 
         Scanner scanner = new Scanner(inFile);
-        int i = 0;
+        int i = 1;
         while (scanner.hasNext()) {
             String line = scanner.nextLine();
+            //This helps me save parts as different elements of an array
+            String[] elems = line.split(";");
             System.out.println(i + ": " + line);
 
         }
