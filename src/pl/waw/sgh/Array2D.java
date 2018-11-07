@@ -20,8 +20,8 @@ public class Array2D {
                 s = s + arr2d[i][j];
                 System.out.print(arr2d[i][j] + " ");
             }
-            System.out.println("| " + s);
             k = k + s;
+            System.out.println("| " + s);
         }
         System.out.println("-----------" + " " + k);
         for (int j = 0; j < arr2d.length; j++) {
