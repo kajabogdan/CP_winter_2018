@@ -4,7 +4,6 @@ import javax.swing.*;
 
 public class InputParamOptionPane {
     public static void main(String[] args) {
-        int i = 0;
         // null says we have no object there
         JOptionPane.showMessageDialog(null, "Hello there!");
         String name =
