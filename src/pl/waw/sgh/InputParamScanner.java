@@ -15,7 +15,7 @@ public class InputParamScanner {
             if (name.equals("exit")) break;
             System.out.println("Hello" + name);
         }
-        // this doesn't accept something that is not an Int
+        // this doesn't accept something that is not an int
         while (scanner.hasNextInt()) {
             Integer myInt = scanner.nextInt();
             if (myInt.equals(0)) break;
