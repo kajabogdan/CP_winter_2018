@@ -9,7 +9,7 @@ public class FileSize {
         if (newFile.isDirectory()) {
             File[] files = newFile.listFiles();
             for (File f : files) {
-                System.out.println(f.getName() + " " + f.length());
+                System.out.println(f.getName() + " " + f.length() + f.getTotalSpace());
             }
         }
     }
