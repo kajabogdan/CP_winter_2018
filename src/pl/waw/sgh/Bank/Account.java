@@ -27,6 +27,14 @@ public class Account {
         this.customer = customer;
     }
 
+    public void deposit(double amount) {
+        balance = balance.add(BigDecimal.valueOf(amount));
+    }
+
+    public void charge(Double amount) {
+        balance = balance.subtract(BigDecimal.valueOf(amount));
+    }
+
     public Integer getAccountID() {
         return accountID;
     }
