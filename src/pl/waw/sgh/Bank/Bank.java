@@ -37,7 +37,7 @@ public class Bank {
         return acc;
     }
 
-    private Account findAccountByID(Integer accID) {
+ private Account findAccountByID(Integer accID) {
         for (Account acc : accList) {
             if (acc.getAccountID().equals(accID)) {
                 return acc;
@@ -48,13 +48,28 @@ public class Bank {
 
     public void transfer(Integer fromAccID, Integer toAccID, Double amount) {
         Account fromAcc = findAccountByID(fromAccID);
+        Account toAcc = findAccountByID(toAccID);
+        if (fromAcc != null && toAcc != null) {
+            BigDecimal fromBalance = fromAcc.getBalance();
+            if (fromBalance.compareTo(BigDecimal.valueOf(amount)) == -1) {
+                System.out.println("Not enough money on " + fromAcc.getCustomer().getFirstName() + " " + fromAcc.getCustomer().getLastName() + "'s account to carry out the transfer");
+                System.out.println(" ");
+            } else {
+                toAcc.deposit(amount);
+                fromAcc.charge(amount);
+                System.out.println("Transfer from" + fromAcc.getCustomer().getFirstName() + "" + fromAcc.getCustomer().getLastName() + "'s account carried out succesfuly");
+            }
+        } else {
+            System.out.println("Some accounts mentioned in trasfer don't exist ");
+            System.out.println(" ");
+        }
     }
 
-    @Override
-    public String toString() {
-        return "Bank{" +
-                "custs=\n" + custList +
-                ", \nccs\n" + accList +
-                '}';
+        @Override
+        public String toString () {
+            return "Bank{" +
+                    "custs=\n" + custList +
+                    ", \nccs\n" + accList +
+                    '}';
+        }
     }
-}
