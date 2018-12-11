@@ -31,8 +31,13 @@ public class Account {
         balance = balance.add(BigDecimal.valueOf(amount));
     }
 
-    public void charge(Double amount) {
-        balance = balance.subtract(BigDecimal.valueOf(amount));
+        public void charge(Double amount) {
+        if (balance.compareTo(BigDecimal.valueOf(amount)) == -1) {
+            System.out.println("Not enough money on " + customer.getFirstName() + " " + customer.getLastName() + "'s account to charge him");
+             }
+           else {
+               balance = balance.subtract(BigDecimal.valueOf(amount));
+           }
     }
 
     public Integer getAccountID() {
